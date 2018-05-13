@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: 0;
+}
+
+.layout {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+body {
+    min-width: 960px;
+    margin: 0;
+}
+
+header {
+    height: 70px;
+    background: #333;
+}
+
+.header {
+    position: relative;
+    height: 100%;
+}
+
+.logo,
+li>a {
+    color: #fff;
+}
+
+.logo {
+    font-size: 26px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+}
+
+.header ul {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    float: right;
+}
+
+.header ul>li {
+    display: inline-block;
+}
+
+.header ul li a {
+    padding: 4px;
+}
+
+.header ul li a:hover {
+    color: #96c;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.banner {
+    width: 100%;
+    height: 250px;
+    background: #6c3;
+}
+
+.banner .bar {
+    height: 100%;
+    position: relative;
+}
+
+.banner .bar ul {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.bar ul li {
+    width: 20px;
+    padding: 5px 0;
+    background: #cfc;
+    display: inline-block;
+    text-align: center;
+    vertical-align: bottom;
+    margin-bottom: 6px;
+}
+
+.bar ul li.active {
+    padding: 15px 0 5px 0;
+    background: #9fc;
+}
+
+main nav {
+    position: relative;
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+    position: absolute;
+    /*这里设置-1px， 使ul整体下移*/
+    bottom: -1px;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul>li {
+    float: left;
+    width: 120px;
+    padding: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px 20px 0 0;
+    background: #ffc;
+}
+
+nav ul li.active {
+    position: relative;
+    border-bottom: 1px solid #fff;
+    background: #ff9;
+}
+
+main {
+    width: 100%;
+    height: 650px;
+}
+
+.limit {
+    display: flex;
+    width: 960px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.limit div {
+    line-height: 100%;
+    position: relative;
+    width: 225px;
+    height: 170px;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background: #9fc;
+}
+
+.limit p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer {
+    height: 80px;
+    padding: 20px;
+    text-align: center;
+    background: #666;
+}
+
+footer p {
+    line-height: 3em;
+    margin-top: 10px;
+    text-decoration: none;
+}
