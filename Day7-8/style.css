@@ -105,7 +105,6 @@ main nav {
 
 nav ul {
     position: absolute;
-    /*这里设置-1px， 使ul整体下移*/
     bottom: -1px;
     list-style: none;
     text-align: center;
