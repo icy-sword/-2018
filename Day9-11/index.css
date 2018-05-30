@@ -1,0 +1,679 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei";
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0 auto;
+    width: 1600px;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.bg {
+    position: absolute;
+    width: 1600px;
+    background: #000;
+    opacity: 0.65;
+    top: 0;
+    left: 0;
+}
+
+.headline {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.title {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: 300;
+}
+
+.main {
+    opacity: 0.7;
+}
+
+
+/* header */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 990px;
+    background-image: url('../Day9-11/img/bg-1.png');
+}
+
+.bg1 {
+    height: 990px;
+}
+
+.bg1:hover {
+    opacity: 0;
+}
+
+header .text {
+    position: absolute;
+    width: 930px;
+    height: 300px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    top: 150px;
+    left: 315px;
+}
+
+header .text>p:first-child {
+    font-size: 62px;
+    line-height: 72px;
+}
+
+header .headline {
+    width: 768px;
+    margin-top: 80px;
+    margin-left: 101px;
+    opacity: 0.7;
+}
+
+.account {
+    position: absolute;
+    width: 930px;
+    height: 250px;
+    padding: 20px;
+    top: 500px;
+    left: 314px;
+    border: 1px solid #666;
+    text-align: center;
+    color: #fff;
+}
+
+.account>p:first-child {
+    margin-top: 40px;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 2.4px;
+}
+
+.account>.main {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: auto;
+    letter-spacing: 1.8px;
+    opacity: 0.3;
+}
+
+header form {
+    margin: 50px auto;
+}
+
+header input[type="text"] {
+    width: 292px;
+    height: 50px;
+    margin-right: 30px;
+    border: 1px solid #666;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+}
+
+input::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #ccc;
+}
+
+header input[type="submit"] {
+    width: 150px;
+    height: 52px;
+    border: 1px solid #666;
+    vertical-align: bottom;
+    background-color: #fff;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 2px;
+}
+
+
+/* section One */
+
+.first {
+    position: relative;
+    width: 1600px;
+    height: 710px;
+}
+
+.introduce {
+    position: absolute;
+    width: 750px;
+    left: 390px;
+    top: 50px;
+    padding: 10px;
+}
+
+.introduce>p:first-child {
+    text-align: center;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 2.1px;
+}
+
+.introduce .title {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.display {
+    position: absolute;
+    width: 1000px;
+    top: 260px;
+    left: 290px;
+    padding: 10px;
+}
+
+.display>div {
+    width: 450px;
+    height: 200px;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.display .icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.display .text {
+    width: 340px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.first .headline {
+    margin-top: 10px;
+}
+
+.first .main {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+}
+
+
+/* section Two */
+
+.second {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background-image: url('../Day9-11/img/bg-2.png');
+}
+
+.bg2 {
+    height: 800px;
+}
+
+.bg2:hover {
+    opacity: 0;
+}
+
+.second>div:nth-child(2) {
+    position: absolute;
+    width: 560px;
+    margin-left: 314px;
+    top: 200px;
+}
+
+.second .title {
+    width: 400px;
+    color: #fff;
+    text-align: left;
+}
+
+.second .main {
+    width: 400px;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.second form {
+    margin-top: 50px;
+}
+
+.second input[type="submit"] {
+    width: 240px;
+    height: 60px;
+    border: 1px solid #666;
+    margin-right: 25px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: auto;
+    letter-spacing: 1.8px;
+}
+
+.second input:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.second>div:last-child {
+    position: absolute;
+    right: 0;
+    width: 650px;
+    height: 600px;
+    border: 1px solid #fff;
+    border-radius: 35px 0 0 35px;
+    margin-top: 100px;
+}
+
+.second .img {
+    position: absolute;
+    right: 0;
+    height: 542px;
+    margin-top: 29px;
+    border: 1px solid #fff;
+}
+
+
+/* section three */
+
+.third {
+    width: 970px;
+    height: 580px;
+    margin: 0 auto;
+}
+
+.third .title {
+    text-align: center;
+    padding: 0 auto;
+    padding-top: 80px;
+}
+
+.third .container {
+    position: relative;
+    margin-top: 80px;
+}
+
+.third .left {
+    width: 300px;
+    height: 320px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.third .middle {
+    height: 320px;
+    margin: 0 335px 0 335px;
+    padding-top: 1px;
+}
+
+.third .right {
+    width: 300px;
+    height: 320px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.third .main {
+    width: 280px;
+    height: 200px;
+    margin: 20px auto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    text-align: center;
+}
+
+.third .logo {
+    width: 150px;
+    margin: 10px auto;
+    height: 80px;
+    text-align: center;
+}
+
+
+/* section four */
+
+.fourth {
+    width: 1600px;
+    height: 1000px;
+    border-top: #ccc solid 1px;
+    border-bottom: #ccc solid 1px;
+}
+
+.fourth .container {
+    width: 970px;
+    height: 780px;
+    margin: 110px auto;
+}
+
+.container .main {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.container1,
+.container2 {
+    display: inline-block;
+}
+
+.container1 .right,
+.container2 .left {
+    width: 320px;
+    margin: 40px 40px;
+    text-align: left;
+}
+
+.container2 {
+    margin-top: 60px;
+}
+
+.fourth .left {
+    float: left;
+}
+
+.fourth .right {
+    float: right;
+}
+
+
+/* section five */
+
+.fifth {
+    position: relative;
+    width: 1600px;
+    height: 1084px;
+    border-bottom: #ccc solid 1px;
+}
+
+.fifth .container1 {
+    width: 700px;
+    height: 134px;
+    margin-top: 120px;
+    margin-left: 450px;
+}
+
+.fifth .title {
+    text-align: center;
+}
+
+.fifth .main {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    margin: 15px auto;
+}
+
+.fifth .container2 {
+    width: 970px;
+    height: 720px;
+    margin-left: 310px;
+}
+
+.container2 .img {
+    display: inline-block;
+    width: 470px;
+    height: 350px;
+    margin: 5px;
+}
+
+.bg3 {
+    background: #000;
+    opacity: 0;
+    width: 470px;
+    height: 340px;
+}
+
+.bg3>div:first-child {
+    position: absolute;
+    width: 280px;
+    height: 160px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.bg3 .CV {
+    font-size: 12px;
+    line-height: 28px;
+    opacity: 0.4;
+}
+
+.bg3-1 {
+    position: absolute;
+    left: 315px;
+    top: 319px;
+}
+
+.bg3-2 {
+    position: absolute;
+    left: 800px;
+    top: 319px;
+}
+
+.bg3-3 {
+    position: absolute;
+    left: 315px;
+    top: 678px;
+}
+
+.bg3-4 {
+    position: absolute;
+    left: 800px;
+    top: 678px;
+}
+
+.bg3:hover {
+    opacity: 0.65;
+    color: #fff;
+}
+
+.fifth .icon {
+    margin-top: 20px;
+}
+
+.fifth .icon1 {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.fifth .icon1 img {
+    margin: 5px auto;
+}
+
+
+/* section six */
+
+.sixth {
+    width: 1600px;
+    height: 700px;
+}
+
+.sixth form {
+    position: absolute;
+    width: 470px;
+    height: 560px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: 315px;
+    margin-top: 69px;
+}
+
+form p {
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 2.4px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sixth input[type="text"] {
+    width: 330px;
+    height: 30px;
+    margin-left: 49px;
+    margin-top: 35px;
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: left top;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.sixth textarea {
+    width: 330px;
+    height: 124px;
+    margin-left: 49px;
+    margin-top: 35px;
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: left top;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.sixth input[type="submit"] {
+    width: 370px;
+    height: 50px;
+    margin-left: 49px;
+    margin-top: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #000;
+    font-size: 12px;
+    letter-spacing: 1.8px;
+    text-align: center;
+    color: #fff;
+}
+
+.sixth .info {
+    position: absolute;
+    width: 370px;
+    height: 500px;
+    margin-left: 825px;
+    margin-top: 70px;
+    padding: 60px 20px 0 80px;
+}
+
+.info .title {
+    text-align: left;
+}
+
+.info .main {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 25px;
+}
+
+.sixth .details {
+    position: absolute;
+    width: 370px;
+    height: 200px;
+    margin-top: 50px;
+}
+
+.dt {
+    margin-top: 30px;
+}
+
+.dt img {
+    vertical-align: middle;
+}
+
+.dt>div {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+
+/* footer */
+
+footer {
+    width: 1600px;
+    height: 420px;
+    background: #000;
+    color: #fff;
+}
+
+footer .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+footer .row {
+    padding: 20px;
+    margin: 70px auto 0 auto;
+}
+
+.row>p:first-child {
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 2.1px;
+}
+
+.row>p:not(:first-child) {
+    font-size: 16px;
+    line-height: 46px;
+    opacity: 0.3;
+}
+
+footer .row4 {
+    width: 300px;
+}
+
+.row4>p:nth-child(2) {
+    font-size: 18px;
+    line-height: 28px;
+    opacity: 0.4;
+}
+
+footer .icon {
+    margin-top: 20px;
+}
+
+footer .icon1 {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+footer .icon1 img {
+    margin: 5px auto;
+}
