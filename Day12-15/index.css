@@ -1,0 +1,663 @@
+/* 
+1.最左侧一列要求自适应浏览器高度，左上面4个按钮相对浏览器左上角固定位置，左下方两个按钮相对浏览器左下角固定位置;
+2.左侧第二列(蓝色背景色)导航列固定宽度，高度也是自适应浏览器高度，最下面的Monthly Goals部分的内容相对浏览器下边固定位置;
+3.整个白色区域自适应宽度，右上方的人脸，名字部分相对浏览器右上角固定位置;
+4.白色区域左侧列固定宽度，右侧列自适应宽度; 
+*/
+
+* {
+    font-family: 'Microsoft Yahei';
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    height: 100%;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.notice {
+    font-size: 14px;
+    line-height: 24px;
+    float: right;
+    width: 32px;
+    height: 24px;
+    margin-top: 6px;
+    text-align: center;
+    color: #fff;
+    border-radius: 15px;
+    background-color: rgb(42, 159, 246);
+}
+
+.timestamp {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 36px;
+    color: rgb(102, 153, 153);
+}
+
+.warning {
+    float: right;
+    width: 24px;
+    height: 24px;
+    margin-top: 6px;
+    border-radius: 50%;
+    background: url(../Day12-15/images/warning.png)no-repeat center center;
+    background-color: rgb(234, 73, 45);
+}
+
+.avatar {
+    float: left;
+    width: 58px;
+    height: 58px;
+    margin-top: 11px;
+    margin-right: 10px;
+}
+
+.avatar1 {
+    background: url(../Day12-15/images/face-1.png)no-repeat center center;
+}
+
+.avatar2 {
+    background: url(../Day12-15/images/face-2.png)no-repeat center center;
+}
+
+.avatar3 {
+    background: url(../Day12-15/images/face-3.png)no-repeat center center;
+}
+
+.avatar4 {
+    background: url(../Day12-15/images/face-4.png)no-repeat center center;
+}
+
+.avatar5 {
+    background: url(../Day12-15/images/face-5.png)no-repeat center center;
+}
+
+.avatar6 {
+    background: url(../Day12-15/images/face-6.png)no-repeat center center;
+}
+
+.avatar7 {
+    background: url(../Day12-15/images/face-7.png)no-repeat center center;
+}
+
+.avatar8 {
+    background: url(../Day12-15/images/face-8.png)no-repeat center center;
+}
+
+.info {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    vertical-align: middle;
+}
+
+.father {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.username1 {
+    color: rgb(108, 187, 246);
+}
+
+.userdetail {
+    font-size: 14px;
+    color: rgb(206, 206, 206);
+}
+
+
+/* nav1 */
+
+.nav1 {
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background: rgb(29, 37, 49);
+}
+
+.nav1 .container1 {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+
+.nav1 .item {
+    width: 60px;
+    height: 60px;
+    margin: 20px auto;
+    border-radius: 50%;
+}
+
+.nav1 .item1 {
+    background: url(../Day12-15/images/Item-1.png)no-repeat center center;
+    background-color: rgb(41, 158, 245);
+}
+
+.nav1 .item2 {
+    background: url(../Day12-15/images/Item-2.png)no-repeat center center;
+    background-color: rgb(149, 129, 228);
+}
+
+.nav1 .item3 {
+    background: url(../Day12-15/images/Item-3.png)no-repeat center center;
+    background-color: rgb(239, 79, 52);
+}
+
+.nav1 .container2 {
+    position: absolute;
+    bottom: 20px;
+    left: 26px;
+}
+
+.nav1 .button {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 16px;
+}
+
+.nav1 .button1 {
+    background: url(../Day12-15/images/Grid.png)no-repeat center center;
+}
+
+.nav1 .button2 {
+    background: url(../Day12-15/images/Settings.png)no-repeat center center;
+}
+
+
+/* nav2 */
+
+.nav2 {
+    position: absolute;
+    left: 100px;
+    width: 250px;
+    height: 100%;
+    background: rgb(34, 44, 60);
+}
+
+.nav2>div:not(:last-child) {
+    width: 190px;
+    margin: 30px;
+}
+
+.nav2 .title p {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 40px;
+    color: rgb(64, 75, 92);
+}
+
+.nav2 .text>div:not(:first-child) p {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 36px;
+    color: rgb(112, 122, 136);
+}
+
+.text p {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.title span {
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-top: 12px;
+    background: url(../Day12-15/images/Settings.png)no-repeat center center;
+}
+
+.icon span {
+    display: inline-block;
+    width: 18px;
+    height: 36px;
+    margin-right: 10px;
+}
+
+.one span {
+    background: url(../Day12-15/images/Book-of-Wisdom.png)no-repeat center left;
+}
+
+.two span {
+    background: url(../Day12-15/images/Video-Camera.png)no-repeat center left;
+}
+
+.three span {
+    background: url(../Day12-15/images/Painting.png)no-repeat center left;
+}
+
+.four span {
+    background: url(../Day12-15/images/Chart.png)no-repeat center left;
+}
+
+.progress {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    width: 190px;
+}
+
+progress {
+    width: 190px;
+    height: 4px;
+    border: 1px solid rgb(0, 0, 0, 0);
+    background-color: transparent;
+}
+
+progress::-moz-progress-bar {
+    background-color: rgb(45, 56, 72);
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgb(45, 56, 72);
+}
+
+progress::-webkit-progress-value {
+    background-color: rgb(154, 138, 277);
+}
+
+.progress p {
+    font-size: 14px;
+    color: rgb(211, 213, 216);
+}
+
+
+/* main */
+
+main {
+    position: absolute;
+    left: 350px;
+    overflow-y: auto;
+    height: 920px;
+}
+
+.top {
+    height: 80px;
+}
+
+.top>p {
+    font-size: 24px;
+    line-height: 80px;
+    margin-left: 30px;
+}
+
+.top .user {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+}
+
+.status2 {
+    float: right;
+    width: 14px;
+    height: 14px;
+    margin-top: 33px;
+    margin-right: 11px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: url(../Day12-15/images/Status2.png)no-repeat;
+    background-color: #fff;
+}
+
+.top .drop {
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin: 30px;
+    background: url(../Day12-15/images/dropdown.png)no-repeat center center;
+}
+
+.main {
+    position: relative;
+    height: 500px;
+}
+
+.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 500px;
+}
+
+.left input[type='text'] {
+    width: 340px;
+    height: 36px;
+    margin: 15px 25px;
+    padding-left: 10px;
+}
+
+.left .search_box {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.left .search_button {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    float: right;
+    width: 15px;
+    height: 15px;
+}
+
+.left .dialog {
+    width: 350px;
+    padding: 0 20px 10px 30px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.mask {
+    position: absolute;
+    width: 350px;
+    height: 108px;
+    padding: 0 20px 10px 30px;
+    opacity: 0;
+}
+
+.highlight {
+    position: absolute;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    content: '';
+    background: rgb(42, 159, 246);
+}
+
+.mask:hover {
+    opacity: 1;
+}
+
+.status1 {
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin-top: 6px;
+    background: url(../Day12-15/images/Status1.png)no-repeat;
+}
+
+.status1+.username {
+    float: right;
+    margin-left: 5px;
+}
+
+.timestamp1 {
+    float: right;
+    margin-top: 14px;
+}
+
+.content p {
+    font-size: 12px;
+    line-height: 19px;
+    color: rgb(102, 102, 102);
+}
+
+.left .content p {
+    float: left;
+}
+
+.focus {
+    width: 311px;
+}
+
+.notice1 {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.right {
+    min-width: 500px;
+    margin: 0 0 0 400px;
+}
+
+.right .subtitle {
+    height: 70px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.right .box {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box .line {
+    height: 1px;
+    flex-grow: 1;
+}
+
+.box .line1 {
+    background: #ccc;
+}
+
+.box .line2 {
+    background: rgb(115, 190, 246);
+}
+
+.box .text {
+    font-size: 14px;
+    line-height: 19px;
+    margin: 0 30px;
+    color: rgb(204, 210, 219);
+}
+
+.box .text1 {
+    color: rgb(204, 210, 219);
+}
+
+.box .text2 {
+    color: rgb(115, 190, 246);
+}
+
+.subtitle>div:first-child {
+    font-size: 18px;
+    width: 120px;
+    margin-top: 23px;
+    margin-left: 30px;
+}
+
+.status {
+    float: right;
+    width: 8px;
+    height: 8px;
+    margin-top: 8px;
+    background: url(../Day12-15/images/Status1.png)no-repeat;
+}
+
+.sub_botton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 34px;
+    margin-top: 18px;
+}
+
+.img div {
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(230, 230, 230));
+}
+
+.img div:not(:last-child) {
+    border-right: 1px solid #ccc;
+}
+
+.sub_botton .img1 {
+    display: inline-table;
+    box-sizing: border-box;
+    height: 32px;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.img1>div {
+    display: inline-table;
+    width: 34px;
+    height: 32px;
+}
+
+.img1 img {
+    width: 16px;
+    height: 16px;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+.sub_botton hr {
+    display: inline-table;
+    width: 0;
+    height: 32px;
+    margin: 0 15px;
+}
+
+.sub_botton span {
+    font-size: 14px;
+    line-height: 34px;
+    margin-right: 15px;
+    vertical-align: top;
+    color: rgb(102, 102, 153);
+}
+
+.sub_botton .img2 {
+    display: inline-table;
+    box-sizing: border-box;
+    height: 32px;
+    margin-right: 15px;
+    vertical-align: top;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.img2>div {
+    display: inline-table;
+    width: 34px;
+    height: 32px;
+}
+
+.img2 img {
+    width: 6px;
+    height: 10px;
+    margin-top: 12px;
+    margin-left: 15px;
+}
+
+.right .openchat {
+    padding: 0 20px 10px 30px;
+}
+
+.openchat .container {
+    padding-top: 11px;
+}
+
+.timestamp2 {
+    margin-left: 15px;
+}
+
+.openchat .content {
+    overflow: hidden;
+}
+
+.chat_pictures {
+    margin-left: 100px;
+}
+
+.chat_pictures>.photo {
+    display: inline-table;
+    width: 156px;
+    height: 100px;
+}
+
+.chat_pictures>.bg_photo {
+    position: absolute;
+    display: inline-table;
+    width: 156px;
+    height: 100px;
+    opacity: 0;
+}
+
+.bg_photo>div {
+    position: absolute;
+    top: 25px;
+    left: 53px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(120, 120, 120);
+}
+
+.bg_icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin: 17px;
+    background: url(../Day12-15/images/Open-icon.png);
+}
+
+.chat_pictures .photo1 {
+    background: url(../Day12-15/images/Photo-1.png);
+}
+
+.chat_pictures .photo2 {
+    background: url(../Day12-15/images/Photo-2.png);
+}
+
+.bg_photo:hover {
+    opacity: 1;
+}
+
+.message_box {
+    display: flex;
+    overflow: hidden;
+    width: 90%;
+    margin: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.message_box>div {
+    display: inline-block;
+    height: 54px;
+    vertical-align: top;
+}
+
+.message_box>div:first-child {
+    float: left;
+    width: 54px;
+    background: radial-gradient(circle, rgb(255, 255, 255), rgb(230, 230, 230));
+}
+
+.message_box>div:last-child {
+    float: right;
+    width: 1px;
+}
+
+.message_box img {
+    margin: 20px;
+}
+
+.message_box input[type='text'] {
+    width: 100%;
+    height: 54px;
+    padding-left: 20px;
+    border: none;
+}
