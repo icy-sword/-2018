@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>进制转换</title>
+</head>
+
+<body>
+    <input id="decNumber" type="number" placeholder="输入一个十进制非负整数">
+    <input id="binbit" type="number" placeholder="输入转化后二进制数字位数">
+    <button id="transbtn">转化为二进制</button>
+    <p id="result">运算结果</p>
+    <script>
+        document.getElementById("transbtn").onclick = function dec2bin(decNumber) {
+            var num = document.getElementById("decNumber").value;
+            var len = document.getElementById("binbit").value;
+            var bin = '';
+            var arr = [];
+            if (parseInt(num) == num) {
+                if (num > 0) {
+                    while (num > 0) {
+                        bin = num % 2;
+                        num = parseInt(num / 2);
+                        arr.push(bin);
+                    }
+                    arr.reverse();
+                    arrnew = arr.join("");
+                    if (len <= arr.length) {
+                        document.getElementById("result").innerHTML = '转化为二进制后结果为：' + arrnew + ' <br> ' + '需要的长度为：' + len + ' <br> ' + '结果实际长度为：' + arr.length;
+                    } else {
+                        var str = '';
+                        for (var i = arr.length; i < len; i++) {
+                            str += '0';
+                            arrfix = str + arr;
+                            arrfix = arrfix.replace(/,/g, '');
+                            document.getElementById("result").innerHTML = '转化为二进制后结果为：' + arrfix + ' <br> ' + '需要的长度为：' + len + ' <br> ' + '结果实际长度为： ' + arrfix.length;
+                        }
+                    }
+                } else {
+                    document.getElementById("result").innerHTML = '请输入一个非负的整数！';
+                    return;
+                }
+            } else {
+                document.getElementById("result").innerHTML = '请输入一个整数！';
+                return;
+            }
+        }
+    </script>
+</body>
+
+</html>
