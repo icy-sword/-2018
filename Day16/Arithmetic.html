@@ -21,8 +21,7 @@
             var num2 = document.getElementById("second-number").value;
             if (num1 && num2) {
                 if (!isNaN(num1) && !isNaN(num2)) {
-                    document.getElementById("result").innerHTML = parseInt(document.getElementById("first-number").value) + parseInt(document.getElementById(
-                        "second-number").value);
+                    document.getElementById("result").innerHTML = parseInt(num1) + parseInt(num2);
                 } else {
                     console.log("请输入合法数字！")
                 }
@@ -33,11 +32,10 @@
         }
         document.getElementById("minus-btn").onclick = function() {
             var num1 = document.getElementById("first-number").value;
-            var
-                num2 = document.getElementById("second-number").value;
+            var num2 = document.getElementById("second-number").value;
             if (num1 && num2) {
                 if (!isNaN(num1) && !isNaN(num2)) {
-                    document.getElementById("result").innerHTML = parseInt(document.getElementById("first-number").value) - parseInt(document.getElementById("second-number").value);
+                    document.getElementById("result").innerHTML = parseInt(num1) - parseInt(num2);
                 } else {
                     console.log("请输入合法数字！")
                 }
@@ -50,8 +48,7 @@
             var num2 = document.getElementById("second-number").value;
             if (num1 && num2) {
                 if (!isNaN(num1) && !isNaN(num2)) {
-                    document.getElementById("result").innerHTML = parseInt(document.getElementById("first-number").value) *
-                        parseInt(document.getElementById("second-number").value);
+                    document.getElementById("result").innerHTML = parseInt(num1) * parseInt(num2);
                 } else {
                     console.log("请输入合法数字！")
                 }
@@ -65,18 +62,18 @@
             if (num1 && num2) {
                 if (!isNaN(num1) && !isNaN(num2)) {
                     if (num2 != 0) {
-                        document.getElementById("result").innerHTML = parseInt(document.getElementById("first-number").value) / parseInt(document.getElementById("second-number").value);
+                        document.getElementById("result").innerHTML = parseInt(num1) / parseInt(num2);
                     } else {
                         console.log('除数怎么能够为0呢！！！');
-                        return false;
+                        return;
                     }
                 } else {
                     console.log("请输入合法数字！")
-                    return false;
+                    return;
                 }
             } else {
                 console.log("请输入内容！")
-                return false;
+                return;
             }
         }
     </script>
