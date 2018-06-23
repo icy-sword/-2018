@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 时钟功能 -->
+    <script>
+        function startTime() {
+            var today = new Date()
+            var h = today.getHours()
+            var m = today.getMinutes()
+            var s = today.getSeconds()
+            m = checkTime(m)
+            s = checkTime(s)
+            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s
+            t = setTimeout('startTime()', 500) //每隔500毫秒（0.5秒）刷新一次时间，为了实现时间动态显示效果
+        }
+        //设置小于10的时间数字格式，例如5秒显示成05秒
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }
+            return i
+        }
+    </script>
+</head>
+
+<body onload="startTime()">
+    <!-- 页面加载时调用startTime函数  -->
+    <div id="txt"></div>
+</body>
+
+</html>

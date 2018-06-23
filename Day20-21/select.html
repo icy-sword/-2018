@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+    <style>
+        select {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <label>
+        <input id="school" name="status" type="radio"> School
+    </label>
+    <label>
+        <input id="company" name="status" type="radio"> Company
+    </label>
+
+    <select id="school-select">
+        <option>北京大学</option>
+        <option>浙江大学</option>
+        <option>哈尔滨佛学院</option>
+    </select>
+
+    <select id="company-select">
+        <option>百度</option>
+        <option>google</option>
+    </select>
+
+    <script>
+        //如果使用style.visibility = "hidden/visible"，select隐藏后会有留白
+        document.getElementById("school").onclick = function() {
+            document.getElementById("company-select").style.display = "none";
+            document.getElementById("school-select").style.display = "inline";
+        }
+        document.getElementById("company").onclick = function() {
+            document.getElementById("school-select").style.display = "none";
+            document.getElementById("company-select").style.display = "inline";
+        }
+    </script>
+</body>
+
+</html>

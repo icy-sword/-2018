@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="name" type="text">
+    <button id="submit-btn">Submit</button>
+    <script>
+        document.getElementById("name").onkeydown = function(event) {
+            if (event && event.keyCode == 27) { //ESC键
+                document.getElementById('name').value = '';
+            }
+            if (event && event.keyCode == 13) { //ENTER键
+                x = document.getElementById('name').value;
+                console.log(x);
+            }
+        };
+
+        document.getElementById("submit-btn").onclick = function input(decNumber) {
+            x = document.getElementById('name').value;
+            console.log(x);
+        }
+    </script>
+</body>
+
+</html>
