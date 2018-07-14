@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function Go() {
+            console.log("Go");
+        }
+
+        function GoSteps(n) {
+            if (n === undefined) {
+                n = 1;
+            }
+            if (!isNaN(n) || n === true) {
+                n = Math.floor(Number(n));
+                for (let i = 0; i < n; i++) {
+                    Go();
+                }
+            } else {
+                return 0;
+            }
+        }
+        console.log("走10步");
+        GoSteps(10); // Go 10次 
+        console.log("走1步");
+        GoSteps(1); // Go 1次 
+        console.log("走1步");
+        GoSteps(); //Go 1 次， 认为缺少参数时， 默认参数为1
+        console.log("原地不动");
+        GoSteps(0); // 0次 
+        console.log("原地不动");
+        GoSteps(-1); // 0次 
+        console.log("走1步");
+        GoSteps(1.4); // Go 1次 
+        console.log("走1步");
+        GoSteps(1.6); // Go 1次 
+        console.log("原地不动");
+        GoSteps(-1); // 0次
+        console.log("走1步");
+        GoSteps(true); // Go 1次 
+        console.log("原地不动");
+        GoSteps(false); // 0次 
+        console.log("原地不动");
+        GoSteps("Test"); // 0次 
+        console.log("原地不动");
+        GoSteps(NaN); // 0次 
+        console.log("原地不动");
+        GoSteps(null); // 0次
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

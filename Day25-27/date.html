@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date</title>
+</head>
+
+<body>
+    <script>
+        var d = new Date();
+        var year = d.getFullYear();
+        var month = d.getMonth() + 1; //getMonth()返回的是0-11
+        var date = d.getDate();
+        var hours = d.getHours();
+        var minutes = d.getMinutes();
+        var seconds = d.getSeconds();
+        var weekday = new Array(7);
+        var noon = "";
+
+        function dateFix() {
+            if (month < 10 && month.toString().length == 1) {
+                month = "0" + month;
+            }
+            if (date < 10 && date.toString().length == 1) {
+                date = "0" + date;
+            }
+            if (hours < 10 && hours.toString().length == 1) {
+                hours = "0" + hours;
+            }
+            if (minutes < 10 && minutes.toString().length == 1) {
+                minutes = "0" + minutes;
+            }
+            if (seconds < 10 && seconds.toString().length == 1) {
+                seconds = "0" + seconds;
+            }
+        }
+
+        function weekCN() {
+            weekday[0] = "星期天"
+            weekday[1] = "星期一"
+            weekday[2] = "星期二"
+            weekday[3] = "星期三"
+            weekday[4] = "星期四"
+            weekday[5] = "星期五"
+            weekday[6] = "星期六"
+            document.write(weekday[d.getUTCDay()]);
+        }
+
+        function weekEN() {
+            weekday[0] = "Sunday"
+            weekday[1] = "Monday"
+            weekday[2] = "Tuesday"
+            weekday[3] = "Wednesday"
+            weekday[4] = "Thursday"
+            weekday[5] = "Friday"
+            weekday[6] = "Saturday"
+            document.write(weekday[d.getUTCDay()]);
+        }
+
+        function Noon() {
+            if (hours > 12) {
+                hours -= 12;
+                noon = "PM";
+            } else {
+                noon = "AM";
+            }
+        }
+
+        function outputCN() {
+            dateFix();
+            document.write(year + "年" + month + "月" + date + "日" + "&nbsp");
+            weekCN();
+            document.write("&nbsp" + hours + "时" + minutes + "分" + seconds + "秒" + "&nbsp");
+            document.write("<br />");
+        }
+
+        function outputEN() {
+            Noon();
+            dateFix();
+            document.write(year + "-" + month + "-" + date + "&nbsp");
+            weekEN();
+            document.write("&nbsp" + hours + ":" + minutes + ":" + seconds + "&nbsp");
+            document.write(noon);
+            document.write("<br />");
+        }
+
+        outputCN();
+        outputEN();
+    </script>
+</body>
+
+</html>
