@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper {
+    width: 300px;
+    position: relative;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+#email-input,
+.email-sug>li {
+    padding-left: 5px;
+}
+
+#email-input {
+    position: absolute;
+    top: 0;
+    height: 30px;
+    width: 100%;
+}
+
+.email-sug {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    font-family: FZYaoti;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-bottom: none;
+}
+
+.email-sug li {
+    height: 30px;
+    line-height: 30px;
+}
+
+.email-sug li:hover {
+    background-color: #0cc;
+    color: #fff;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #fcc;
+    color: #fff;
+}
